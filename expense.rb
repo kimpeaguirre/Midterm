@@ -19,8 +19,12 @@ class Expense
 
 end
 
+#class Addexpense < Expense
+#end
+
 
 #expense = Expense.new(some_id, some_item, some_amount)
 #expenses << expense
 
 #last_expense = expenses.last
+
