@@ -7,4 +7,5 @@ class Expense
 		self.item = item
 		self.amount = amount
 	end
+
 end

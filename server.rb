@@ -1,10 +1,10 @@
 require 'sinatra'
-require './expense'
+#require './expense'
 
-expenses = []
+#expenses = []
 
 get '/' do
-	erb :index
+	#erb :index
 end
 
 get '/new' do
@@ -12,9 +12,18 @@ get '/new' do
 end
 
 get '/save' do
-	redirect to '/'
+	#redirect to '/'
 end
 
 get '/show/:id' do
+	@id = params[:id]
+	@item = params[:item]
+	@amount = params[:amount]
 	erb :show
+
+post '/save' do
+	@save = Expense.new params[:id], params[:item], params[:amount]
+	erb :animal
+end
+
 end
